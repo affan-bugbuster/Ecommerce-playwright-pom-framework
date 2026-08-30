@@ -24,7 +24,7 @@ const config =
         use:
         {
           browserName: 'chromium',
-          headless: false,
+          headless: true,
           screenshot: 'only-on-failure',
           video: 'retain-on-failure',
           trace: 'retain-on-failure'
@@ -35,7 +35,7 @@ const config =
         use:
         {
           browserName: 'firefox',
-          headless: false,
+          headless: true,
           screenshot: 'only-on-failure',
           video: 'retain-on-failure',
           trace: 'retain-on-failure'
@@ -47,7 +47,7 @@ const config =
         {
           browserName: 'chromium',
           channel: 'msedge',
-          headless: false,
+          headless: true,
           screenshot: 'only-on-failure',
           video: 'retain-on-failure',
           trace: 'retain-on-failure'
@@ -58,7 +58,7 @@ const config =
         use:
         {
           browserName: 'webkit',
-          headless: false,
+          headless: true,
           screenshot: 'only-on-failure',
           video: 'retain-on-failure',
           trace: 'retain-on-failure'
