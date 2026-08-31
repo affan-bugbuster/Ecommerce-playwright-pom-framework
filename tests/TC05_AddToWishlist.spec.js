@@ -5,7 +5,7 @@ const {CategoryPage} = require ('../pages/CategoryPage');
 const {ProductPage} = require ('../pages/ProductPage')
  
 //Write Test
-test.only ('@regression TC05_AddToWishlist', async ({page}) =>
+test ('@regression TC05_AddToWishlist', async ({page}) =>
 {
     const home = new HomePage (page);
     await home.goto();
