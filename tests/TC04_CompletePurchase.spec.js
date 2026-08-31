@@ -5,7 +5,7 @@ const {ProductPage} = require ('../pages/ProductPage');
 const {LoginPage} = require ('../pages/LoginPage');
 const {CheckoutPage} = require ('../pages/CheckoutPage');
 
-test.only ('@regression TC04_CompletePurchase', async ({page}) =>
+test ('@regression TC04_CompletePurchase', async ({page}) =>
 {
     const home = new HomePage (page);
     await home.goto();
