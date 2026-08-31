@@ -5,13 +5,14 @@ const {ProductPage} = require ('../pages/ProductPage');
 const {LoginPage} = require ('../pages/LoginPage');
 const {CheckoutPage} = require ('../pages/CheckoutPage');
 
-test ('@regression TC04_CompletePurchase', async ({page}) =>
+test.only ('@regression TC04_CompletePurchase', async ({page}) =>
 {
     const home = new HomePage (page);
     await home.goto();
     await home.openAllLaptopsAndNotebooks();
 
     const category = new CategoryPage (page);
+    await page.waitForTimeout(2000);
     await category.openProductByName();
 
     const product = new ProductPage (page);
@@ -27,9 +28,13 @@ test ('@regression TC04_CompletePurchase', async ({page}) =>
     const login = new LoginPage (page);
     await login.login('affanqureshi@hotmail.com', '123456');
 
+    await page.waitForTimeout(2000);
     await checkout.selectShippingAddressByIndex(1);
+    await page.waitForTimeout(2000);
     await checkout.continueShipping();
+    await page.waitForTimeout(2000);
     await checkout.continuePayment();
+    await page.waitForTimeout(2000);
     await checkout.confirmOrder();
 
     await expect(checkout.orderPlacedHeading).toBeVisible();

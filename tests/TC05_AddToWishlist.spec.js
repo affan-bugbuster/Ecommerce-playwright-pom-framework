@@ -15,6 +15,8 @@ test ('@regression TC05_AddToWishlist', async ({page}) =>
     const login = new LoginPage (page);
     await login.login('affanqureshi@hotmail.com', '123456');
 
+    await page.waitForTimeout(2000);
+
     await home.openAllLaptopsAndNotebooks();
 
     const category = new CategoryPage (page);

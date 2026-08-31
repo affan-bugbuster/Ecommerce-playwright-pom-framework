@@ -14,6 +14,8 @@ test ('@regression TC06_AddAffiliate', async ({ page }) =>
     await home.clickLogin();
 
     await login.login('affanqureshi@hotmail.com', '123456');
+
+    await page.waitForTimeout(2000);
   
     await affiliate.openFromFooter();
     await affiliate.fillAffiliateForm({
