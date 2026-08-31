@@ -33,12 +33,14 @@ class CheckoutPage
     async continueShipping() 
     {
         await this.shippingMethodsButton.click();
+        await page.waitForTimeout(2000);
         await this.continueButton.click();
     }
 
     async continuePayment() 
     {
         await this.paymentMethodsButton.click();
+        await page.waitForTimeout(2000);
         await this.continueButton.click();
     }
 

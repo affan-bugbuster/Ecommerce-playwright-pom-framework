@@ -8,7 +8,7 @@ class CategoryPage
 
     async openProductByName ()
     {
-        await this.page.locator("//a[normalize-space()='HP LP3065']").click();
+        await this.page.locator("div[id='content'] div:nth-child(1) div:nth-child(1) div:nth-child(2) div:nth-child(1) h4:nth-child(1) a:nth-child(1)").click();
     }
 }
 
