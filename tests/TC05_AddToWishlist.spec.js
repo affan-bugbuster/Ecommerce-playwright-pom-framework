@@ -20,6 +20,7 @@ test ('@regression TC05_AddToWishlist', async ({page}) =>
     await home.openAllLaptopsAndNotebooks();
 
     const category = new CategoryPage (page);
+    await page.waitForTimeout(2000);
     await category.openProductByName();
 
     const product = new ProductPage (page);
